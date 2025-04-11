@@ -83,3 +83,8 @@ def check_update():
 
 if __name__ == '__main__':
     check_update()
+
+with open("last_hash.txt", "r") as f:
+        last_hash = f.read().strip()
+except FileNotFoundError:
+    last_hash = ""
